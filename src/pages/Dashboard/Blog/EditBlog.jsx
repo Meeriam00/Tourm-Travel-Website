@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import TopSection from '../../../components/TopSection/TopSection';
 import Sidebar from '../Sidebar';
 import Swal from 'sweetalert2';
-import { useEditBlogsMutation, useGetBlogsQuery } from '../../../tools/services/BlogApi';
+import { useEditBlogsMutation, useGetBlogsQuery } from '../../../tools/services/blogApi';
 import { useTranslation } from 'react-i18next';
 
 const EditBlog = () => {

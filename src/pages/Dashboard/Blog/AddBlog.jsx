@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopSection from '../../../components/TopSection/TopSection';
 import Sidebar from '../Sidebar';
-import { useAddBlogsMutation } from '../../../tools/services/BlogApi';
+import { useAddBlogsMutation } from '../../../tools/services/blogApi';
 import Swal from 'sweetalert2';
 import '../Add.scss'
 import { useTranslation } from 'react-i18next';
