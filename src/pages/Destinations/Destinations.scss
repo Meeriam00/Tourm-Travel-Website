@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin position{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin title-of-section{
+    p{
+        font-size: 37px;
+        font-family: 'Montez';
+        margin: 0;
+        padding: 0;
+        color: #113d48;
+    }
+    h1{
+        font-size: 50px;
+        color: #113d48;
+    }
+}
+@mixin best_holiday_p{
+    p{
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        font-family: sans-serif;
+        color: #113d48;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 10px;
+
+        .icon{
+            color: #1ca8cb;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// Top of the page
+.top_of_page{
+    width: 100%;
+    height: 50vh;
+    background-image: url('../../assets/Images/hero_1_5.jpg');
+    background-color: rgba(0, 0, 0, 0.493); 
+    background-blend-mode: multiply; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h1{
+        color: white;
+        font-size: 40px;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+
+        li{
+            color: white;
+            font-size: 17px;
+
+            .right-icon{
+                font-size: 16px;
+                margin: 0 5px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+// Top of the page
+
+
+
+
+
+
+// Destinations
+.destinationss{
+width: 100%;
+height: auto;
+align-items: center;
+padding-top: 7%;
+background: var(--dark-about);
+  background: var(--destination);
+
+
+.destinations-item{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 25px;
+
+   .destination-image{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+     img{
+        width: 100%;
+        height: 100%;
+        transition: all .7s ease;
+    }
+   }
+
+   .destination-image:hover{
+    img{
+        transform: scale(1.1);
+    }
+   }
+   
+
+   span{
+    position: absolute;
+    background-color: #1ca8cb;
+    color: white;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    top: 1%;
+    left: 2%;
+   }
+
+    button{
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgba(0, 0, 0, 0.7);
+        padding-top: 15px;
+
+        .right-icon{
+            margin-left: 10px;
+        }
+    }
+    button:hover{
+        color:#1a86a1 ;
+    }
+}
+}
+// Destinations
+
+
+
+
+
+
+// Best holidays package
+.best-holidays-package{
+    @include position();
+    height: auto;
+    padding: 5% 0;
+    background-image: url(../../assets/Images/bgcategory.png);
+    background-color: #1a86a11e;
+    .best-holiday-text{
+        @include title-of-section();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3%;
+    }
+
+
+    .best-holiday{
+        width: 100%;
+        height: auto;
+
+
+        .best-holiday-items{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            width: 100%;
+            height: auto;
+            box-shadow: #1a86a134 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            border-radius: 20px;
+            background-color: white;
+            position: relative;
+            transition: all .3s ease;
+            cursor: pointer;
+
+            .item-img{
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all .7s ease;
+                }
+            }
+            .item-img:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+
+
+                span{
+                    position: absolute;
+                    background-color: #1ca8cb;
+                    color: white;
+                    font-weight: 500;
+                    padding: 2px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 1%;
+                    left: 2%;
+                   }
+
+            .holiday-body{
+                display: flex;
+                flex-direction: column;
+                padding: 16px;
+                width: 100%;
+                height: 230px;
+
+                h3{
+                    font-size: 24px;
+                    color: #113d48;
+                }
+
+                .holiday-text{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    @include best_holiday_p();
+                }
+
+                @include best_holiday_p();
+            }
+
+            .linear{
+                background-color: rgba(128, 128, 128, 0.105);
+                width: 100%;
+                height: 1.5px;
+            }
+
+            .holiday-footer{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                height: 70px;
+
+                .price{
+                    display: flex;
+                    flex-direction: column;
+    
+                #original-price{
+                    margin: 0;
+                    color: grey;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                #discounted-price{
+                    margin: 0;
+                    font-size: 24px;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #1a86a1;
+                }
+                #original-price-without-discount{
+                    margin: 0;
+                    font-size: 24px;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #1a86a1;
+                }
+                }
+
+                button{
+                    color: white;
+                    background-color: #1a86a1;
+                    border: 1px solid #2b5b67b0;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                  }
+                  button:hover{
+                    background-color: white ;
+                    color: #1a86a1;
+                    transition: all .3s ease;
+                  }
+            }
+        }
+        .best-holiday-items:hover{
+            transform: translateY(-10px); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+
+    }
+}
+
+// Best holiday package
+
+@media (max-width: 576px) {
+    .best-holidays-package{
+        .best-holiday-text{
+            h1{
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.edit-container{
+  background: var(--dark-about);
+  background: var(--activity);
+  .edit-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        background-color: #34a6c321 ;
+        color:  #1c5563;
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Inter",sans-serif;
+        border-radius: 20px;
+    }
+
+   form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    label{
+        color: #1c5563;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    input,textarea{
+        width: 500px;
+        margin-bottom: 15px;
+        padding: 7px;
+        margin-left: 15px;
+        margin-top: 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .form-control{
+        border: 2px solid #173a43;
+    }
+   
+    .form-control:focus{
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    textarea{
+        margin-bottom: 20px;
+    }
+    
+    button {
+        color: white;
+        background-color: #1a86a1;
+        border: 1px solid #2b5b67;
+        padding: 12px 40px;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+  
+       
+      }
+
+      
+   }
+}
+}
+@media (max-width: 1024px) {
+    .edit-container{
+      .edit-part {
+        form {
+          input, textarea {
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+   .edit-container{
+    .edit-part {
+      h1 {
+        font-size: 32px;
+        padding: 8px;
+      }
+  
+      form {
+        input, textarea {
+          width: 90%;
+          margin-left: 0;
+          align-self: center;
+        }
+  
+        button {
+          padding: 10px 30px;
+          font-size: 0.95rem;
+          align-self: center;
+          
+        }
+      }
+    }
+   }
+  }
+  
+  @media (max-width: 480px) {
+   .edit-container{
+    .edit-part {
+      h1 {
+        font-size: 26px;
+        padding: 6px;
+      }
+  
+      form {
+        input, textarea {
+          width: 95%;
+          font-size: 15px;
+        }
+  
+        label {
+          font-size: 16px;
+        }
+  
+        button {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+         
+        }
+      }
+    }
+   }
+  }
+  

@@ -1,0 +1,212 @@
+@import '../../assets/theme';
+html,body{
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+$Inter:'Inter','sans-serif';
+$Roboto:'Roboto';
+
+@mixin displayproperty{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin ptext{
+     align-items: center;
+     font-size: 15px;
+     font-weight: 500;
+     font-family: $Inter;
+
+     span{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: #24282c;
+
+        .react-icon:nth-child(1){
+            margin-right: 5px;
+            font-size: 15px;
+        }
+        .react-icon:nth-child(2){
+            margin-left: 5px;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+    }
+}
+.top{
+   width: 100%;
+   height: auto;
+   padding: 6px;
+   border-bottom: 1px solid rgb(201, 201, 201);
+    @include displayproperty();
+    justify-content: space-between;
+    .location{
+        @include displayproperty();
+        p{
+            @include displayproperty();
+            @include ptext();
+            margin: 0;
+            margin-left: 15px;
+            .location,.time{
+                margin-right:5px;
+                font-size: 16px;
+            }
+
+        }
+    }
+    .services{
+        @include displayproperty();
+        p{
+            @include ptext();
+            margin: 0;
+            margin-left: 15px;
+            .angle{
+                font-size: 20px;
+                margin-bottom: 2px;
+            }
+        }
+        p:hover{
+            color: #1a697d;
+        }
+        .ant-select-selector{
+            border-radius: 50px;
+            padding: 10px;
+        }
+        .ant-select-selection-item{
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        #mode{
+            background-color:#2188a2;
+            color:  white;
+            font-size: 15px;
+            border: none;
+            padding: 5px 15px;
+            font-family: 'Inter',sans-serif;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+   .top{
+    .location {
+        display: none; 
+    }
+    #mode{
+        display: none;
+    }
+    #faq{
+        display: none;
+    }
+    #faql{
+        display: none;
+    }
+    
+    .services {
+        width: 100%; 
+        justify-content: center; 
+
+        .login{
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+   }
+}
+
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    
+    
+
+    &.fixed {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-color:white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 100%;
+    }
+
+    img{
+        width: 19%;
+        height: 5%;
+    }
+
+        .nav-item {
+        a {
+            color: black;
+            font-size: 16px;
+            font-family: $Inter;
+            text-decoration: none;
+            .icon-size {
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+
+        .hover {
+            visibility: hidden;
+            width: 10%;
+            background-color: black;
+            height: 1px;
+            margin: 0 auto;
+            transition: all 0.5s ease;
+        }
+    }
+
+   .nav-item:hover .hover {
+        visibility: visible;
+        width: 80%;
+    }
+
+   .request {
+        background-color: #2188a2;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 30px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+        border: none;
+
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    .request:hover {
+        background-color: #1c5b6b;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+

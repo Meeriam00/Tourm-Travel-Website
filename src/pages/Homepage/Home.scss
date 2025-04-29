@@ -1,0 +1,670 @@
+@import '../../assets/theme';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin position{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin title-of-section{
+    p{
+        font-size: 37px;
+        font-family: 'Montez';
+        margin: 0;
+        padding: 0;
+        color: #113d48;
+    }
+    h1{
+        font-size: 43px;
+        color: #113d48;
+    }
+}
+@mixin best_holiday_p{
+  p{
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      font-family: sans-serif;
+      color: #113d48;
+      font-weight: 500;
+      margin: 0;
+      margin-top: 10px;
+
+      .icon{
+          color: #1ca8cb;
+          font-size: 19px;
+          margin-right: 3px;
+      }
+  }
+}
+
+
+// Hero Section
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-image) center/cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.456);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .text {
+    @include title-of-section();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+    max-width: 600px; 
+    padding: 0 20px;
+
+    p {
+      color: #1a86a1;
+      font-size: 2.5rem;
+      margin-bottom: 7px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    button {
+      color: white;
+      background-color: #1a86a1;
+      border: 1px solid #2b5b67;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: white;
+        color: #1a86a1;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .filtered {
+    width: 60%;
+    min-width: 350px; 
+    max-width: 470px; 
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+ 
+    p{
+      padding: 12px;
+      color: #1a86a1;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      outline: none;
+      border: 1px solid transparent; 
+      background-color: white;
+      border-radius: 5px;
+      transition: all .2s ease;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+    .text {
+      width: 80%;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px 0;
+
+      p{
+        display: none;
+      }
+      h1{
+        font-size: 30px;
+      }
+    }
+
+    .filtered {
+      width: 50%;
+      align-items: stretch;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .text {
+      width: 95%;
+    }
+
+    .filtered {
+      width: 95%;
+    }
+  }
+  @media (max-width: 600px) {
+    .text {
+      width: 95%;
+      h1{
+        font-size: 40px;
+      }
+    }
+
+    .filtered {
+      width: 95%;
+    }
+  }
+}
+// Hero Section
+
+
+
+
+
+
+// Travel Catgeory
+.travel-category{
+    background-image: url(../../assets/Images/bgcategory.png);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    @include title-of-section();
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            color: grey;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        h3{
+            color: #113d48;
+            margin-top: 15px;
+        }
+        img {
+            display: block;
+            border-radius: 30px;
+            width: 100%;
+      }
+      }
+}
+// Travel Catgeory
+
+
+
+
+
+
+
+// Popular destinations
+.popular-destinations{
+  @include position();
+  height: auto;
+  padding: 2% 2% 5% 2%;
+  background-image: var( --dark-bg);
+  background-color: var(--dark-bg-color-shadow);
+  .destination-text{
+      @include title-of-section();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .destinations{
+      width: 100%;
+      height: 100%;
+      padding: 3% 0;
+
+      .destination-items{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          box-shadow: #1a86a118 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+          border-radius: 20px;
+          background-color: white;
+          transition: all .4s ease;
+
+          .item-img{
+              width: 100%;
+              height: 300px;
+              overflow: hidden;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+
+              img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  transition: all .7s ease;
+              }
+          }
+          .item-img:hover{
+              img{
+                  transform: scale(1.1);
+              }
+          }
+
+          .destination-body{
+              display: flex;
+              flex-direction: column;
+              padding: 16px;
+              width: 100%;
+              height: 220px;
+
+              h3{
+                  font-size: 24px;
+                  color: #113d48;
+              }
+
+              .destination-text{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+
+                  @include best_holiday_p();
+              }
+
+              @include best_holiday_p();
+          }
+
+          .linear{
+              background-color: rgba(128, 128, 128, 0.105);
+              width: 100%;
+              height: 1.5px;
+          }
+
+          .destination-footer{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              padding: 13px;
+              p{
+                  margin: 0;
+                  font-size: 24px;
+                  font-family: sans-serif;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  color: #1a86a1;
+              }
+              
+
+              button{
+                background: #17a2b8;
+                color: white;
+                padding: 12px 20px;
+                display: block;
+                text-decoration: none;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                }
+                button:hover{
+                  background-color: white ;
+                  color: #1a86a1;
+                  transition: all .3s ease;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                }
+          }
+      }
+      .destination-items:hover{
+        transform: translateY(-15px);
+      }
+
+  }
+}
+@media (max-width: 1200px) {
+  .popular-destinations .destination-text p {
+    font-size: 35px;
+  }
+  .popular-destinations .destinations .destination-items{
+    margin-bottom: 20px;
+  }
+  .popular-destinations .destination-text h1 {
+    font-size: 55px;
+  }
+}
+@media (max-width: 992px) {
+  .popular-destinations .destination-text p {
+    font-size: 30px;
+  }
+  .popular-destinations .destination-text h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-destinations .destination-text p {
+    font-size: 25px;
+  }
+  .popular-destinations .destination-text h1 {
+    font-size: 35px;
+  }
+  .popular-destinations .destinations .destination-items .item-img {
+    height: 250px;
+  }
+  .popular-destinations .destinations .destination-items .destination-body {
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .popular-destinations .destination-text p {
+    font-size: 20px;
+  }
+  .popular-destinations .destination-text h1 {
+    font-size: 20px;
+  }
+  .popular-destinations .destinations .destination-items .item-img {
+    height: 200px;
+  }
+  .popular-destinations .destinations .destination-items .destination-body .destination-text{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+// Popular Destinations
+
+
+
+
+
+
+
+
+
+// Gallery  scss
+.gallery-places{
+    @include position();
+    background-image: url(../../assets/Images/bgcategory.png);
+    height: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    @include title-of-section();
+    background-color: transparent;
+    .gallery-area {
+      margin-top: 3%;
+        .gallery-card {
+          .box-img {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: auto;
+            img {
+              width: 100%;
+              height: auto;
+              transition: transform 0.3s ease;
+            }
+          }
+          .box-img:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      } 
+}
+@media (max-width: 1200px) {
+  .gallery-places p {
+    font-size: 35px;
+  }
+  .gallery-places h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-places p {
+    font-size: 30px;
+  }
+  .gallery-places h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-places p {
+    font-size: 25px;
+  }
+  .gallery-places h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-places p {
+    font-size: 20px;
+  }
+  .gallery-places h1 {
+    font-size: 30px;
+  }
+}
+// Gallery  scss
+
+
+
+
+
+
+
+
+// Send Message
+.send-message {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  position: relative;
+  @include title-of-section();
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .info-container {
+    width: 40%;
+    text-align: left; 
+    h1 {
+      font-size: 50px;
+      color: white;
+    }
+    p {
+      color: white;
+    }
+  }
+
+  .contact-form {
+    width: 40%;
+    height: auto;
+    background-color: white;
+    padding: 29px;
+    border-radius: 10px;
+    form {
+      .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        input {
+          border-radius: 5px;
+          margin-bottom: 20px;
+          width: 100%;
+          height: 50px;
+          border: 1px solid #ccc; 
+          padding: 0 10px; 
+        }
+        input:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        textarea{
+          border-radius: 5px;
+          margin-bottom: 20px;
+          width: 100%;
+          border: 1px solid #ccc;
+          padding: 10px;
+          box-sizing: border-box;
+          resize: vertical;
+        }
+        textarea:focus{
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      select {
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      select:focus{
+        outline: none;
+          box-shadow: none;
+      }
+      button {
+        margin-top: 20px;
+        border: none;
+        color: #1a86a1;
+        border: 1px solid #1a86a1;
+        background-color: white;
+        font-size: 19px;
+        padding: 15px 30px;
+        border-radius: 30px;
+        cursor: pointer; 
+      }
+      button:hover {
+        background-color: #1a86a1;
+        color: white;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .send-message {
+    .info-container,
+    .contact-form {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .send-message {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 0;
+    .info-container,
+    .contact-form {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+    video{
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .send-message {
+    .info-container,
+    .contact-form {
+      width: 90%;
+      padding: 20px;
+    }
+    .info-container h1{
+      font-size: 40px;
+    }
+    .send-message form .form-group{
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .send-message {
+    .info-container h1{
+      font-size: 30px;
+    }
+  }
+}
+// Send Message
+
+
+
+
+
+
+
+
+// Brand Box
+.brand {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5%;
+img {
+  width: 70%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto;
+}
+img:hover{
+  animation: rotateIn 1s;
+}
+}
+// Brand Box
+
+
+

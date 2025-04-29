@@ -1,0 +1,40 @@
+.light{
+    --button-bg-color:#1a8ea0;
+    --color: white;
+    --bg-image:url(../../assets/Images/hero_1_5.jpg);
+
+    --faq-bg:white;
+    --faq-color:#1a8ea0;
+
+    --text:#113d48;
+    --accordion-button:#1f373c;
+
+    
+}
+
+.dark{
+    --color:#1a8ea0; 
+    --button-bg-color: white;
+    --bg-image:url(../../assets/Images/bgimg.webp);
+
+
+    --faq-bg:#1a8ea0;
+    --faq-color:white;
+
+
+    --dark-bg:url(../../assets/Images/bgcategory.png);
+    --dark-bg-color-shadow: #1a86a111;
+
+
+    --dark-about: #0F4F5F57;
+    --dark-linear:linear-gradient(-180deg,rgba(15, 79, 95, 0.72) 0%, rgba(255, 255, 255, 1) 100%);
+
+    --destination:linear-gradient(90deg,rgba(15, 79, 95, 0.43) 0%, rgba(255, 255, 255, 1) 75%);
+
+
+    --activity:linear-gradient(-2deg,rgba(15, 79, 95, 0.43) 0%, rgba(255, 255, 255, 1) 75%);
+    --text:white;
+
+    --accordion-button:white;
+   
+}
