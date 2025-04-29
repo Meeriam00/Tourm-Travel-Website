@@ -13,7 +13,7 @@ import Test from '../pages/Test/Test'
 import Activity from '../pages/Activity/Activity'
 import Destinations from '../pages/Destinations/Destinations'
 import Blog from '../pages/Blog/Blog'
-import ScrollToTop from '../components/Scrolltotop'
+import ScrollToTop from "../components/ScrollToTop";
 import GuiderDetails from '../components/Guider/GuiderDetails'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import AddBlog from '../pages/Dashboard/Blog/AddBlog'
@@ -59,7 +59,7 @@ const AppRouter = () => {
     <>
       <BrowserRouter>
         <Header />
-        <ScrollToTop />
+        <ScrollToTop  />
         <div className={theme}>
         <Routes>
           <Route path='/' element={<Home />}></Route>
